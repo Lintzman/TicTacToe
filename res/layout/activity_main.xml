@@ -1,0 +1,136 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.tictactoe.MainActivity" >
+
+    <TextView
+        android:id="@+id/txtAction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Welcome to my Tic Tac Toe game!" />
+
+    <Button
+        android:id="@+id/btnNewGame"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtAction"
+        android:layout_centerHorizontal="true"
+        android:text="New Game" />
+    
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnNewGame"
+        android:layout_centerHorizontal="true" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/btnSquare1"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:text="X"
+                android:textSize="48sp" />
+
+            <Button
+                android:id="@+id/btnSquare2"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:text="O"
+                android:textSize="48sp" />
+
+            <Button
+                android:id="@+id/btnSquare3"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:text="X"
+                android:textSize="48sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/btnSquare4"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:text="X"
+                android:textSize="48sp" />
+
+            <Button
+                android:id="@+id/btnSquare5"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:text="O"
+                android:textSize="48sp" />
+
+            <Button
+                android:id="@+id/btnSquare6"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:text="X"
+                android:textSize="48sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/btnSquare7"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:text="X"
+                android:textSize="48sp" />
+
+            <Button
+                android:id="@+id/btnSquare8"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:text="O"
+                android:textSize="48sp" />
+
+            <Button
+                android:id="@+id/btnSquare9"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:text="X"
+                android:textSize="48sp" />
+        </TableRow>
+    </TableLayout>
+
+    
+
+</RelativeLayout>
