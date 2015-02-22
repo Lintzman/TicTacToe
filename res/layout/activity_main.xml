@@ -42,8 +42,8 @@
                 android:layout_height="100dp"
                 android:layout_weight="0.3"
                 android:gravity="center"
-                android:text="X"
-                android:textSize="48sp" />
+                android:textSize="48sp"
+                android:enabled="false" />
 
             <Button
                 android:id="@+id/btnSquare2"
@@ -51,8 +51,8 @@
                 android:layout_height="100dp"
                 android:layout_weight="0.3"
                 android:gravity="center"
-                android:text="O"
-                android:textSize="48sp" />
+                android:textSize="48sp"
+                android:enabled="false" />
 
             <Button
                 android:id="@+id/btnSquare3"
@@ -60,8 +60,8 @@
                 android:layout_height="100dp"
                 android:layout_weight="0.3"
                 android:gravity="center"
-                android:text="X"
-                android:textSize="48sp" />
+                android:textSize="48sp"
+                android:enabled="false" />
         </TableRow>
 
         <TableRow
@@ -75,8 +75,8 @@
                 android:layout_height="100dp"
                 android:layout_weight="0.3"
                 android:gravity="center"
-                android:text="X"
-                android:textSize="48sp" />
+                android:textSize="48sp"
+                android:enabled="false" />
 
             <Button
                 android:id="@+id/btnSquare5"
@@ -84,8 +84,8 @@
                 android:layout_height="100dp"
                 android:layout_weight="0.3"
                 android:gravity="center"
-                android:text="O"
-                android:textSize="48sp" />
+                android:textSize="48sp"
+                android:enabled="false" />
 
             <Button
                 android:id="@+id/btnSquare6"
@@ -93,8 +93,8 @@
                 android:layout_height="100dp"
                 android:layout_weight="0.3"
                 android:gravity="center"
-                android:text="X"
-                android:textSize="48sp" />
+                android:textSize="48sp"
+                android:enabled="false" />
         </TableRow>
 
         <TableRow
@@ -108,8 +108,8 @@
                 android:layout_height="100dp"
                 android:layout_weight="0.3"
                 android:gravity="center"
-                android:text="X"
-                android:textSize="48sp" />
+                android:textSize="48sp"
+                android:enabled="false" />
 
             <Button
                 android:id="@+id/btnSquare8"
@@ -117,8 +117,8 @@
                 android:layout_height="100dp"
                 android:layout_weight="0.3"
                 android:gravity="center"
-                android:text="O"
-                android:textSize="48sp" />
+                android:textSize="48sp"
+                android:enabled="false" />
 
             <Button
                 android:id="@+id/btnSquare9"
@@ -126,7 +126,7 @@
                 android:layout_height="100dp"
                 android:layout_weight="0.3"
                 android:gravity="center"
-                android:text="X"
+				android:enabled="false"
                 android:textSize="48sp" />
         </TableRow>
     </TableLayout>

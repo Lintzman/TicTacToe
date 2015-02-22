@@ -99,6 +99,7 @@ public class MainActivity extends ActionBarActivity {
 	            {
 	            	//disable the remaminig buttons as game is over!
 	            	WeHaveAWinner(Player);
+	            	UpdateGameSquares(false);
 	            }
 	            	
 	    }
@@ -114,6 +115,11 @@ public class MainActivity extends ActionBarActivity {
 		//reset the turn (crosses always starts)
 		crossesTurn = true;
 		
+		UpdateGameSquares(true);
+	}
+	
+	private void UpdateGameSquares(boolean isEnabled)
+	{
 		//clear all the X and O on the buttons and enable each one
 		TableLayout table = (TableLayout)findViewById(R.id.tableLayout1);
 		//This will iterate through your table layout and get the total amount of cells.
@@ -126,12 +132,11 @@ public class MainActivity extends ActionBarActivity {
 	        {
 	            Button btn = (Button) row.getChildAt(y);
 	            //Do what you need to do.
-	            btn.setText("");
-	            btn.setEnabled(true);
+	            if(isEnabled) btn.setText("");
+	            btn.setEnabled(isEnabled);
 	        }
 	    }
 	}
-	
 	private boolean haveWinner(String Player)
 	{
 		int totalInRow = 0;
@@ -146,7 +151,8 @@ public class MainActivity extends ActionBarActivity {
 			{
 				//check if this square of the board is for the current player
 				//if not then exit check on this row
-				if(board[row][column] != null && !board[row][column].equals(Player)) break;
+				if(board[row][column] == null) break;
+				if(!board[row][column].equals(Player)) break;
 				
 				//square is for this player so increment counter
 				totalInRow++;
@@ -156,19 +162,21 @@ public class MainActivity extends ActionBarActivity {
 			if(totalInRow == 3) return true; 	
 		}
 		
+		
 		//check each column
 		for(column = 0; column < 3; column++)
 		{
-			totalInRow = 0; //reest
-			//check each row
+			totalInRow = 0; //reest		
 			for(row = 0; row < 3; row++)
 			{
+				
 				//check if this square of the board is for the current player
 				//if not then exit check on this row
-				if(board[column][row] != null && !board[column][row].equals(Player)) break;
-				
-				//square is for this player so increment counter
-				totalInRow++;
+				if(board[row][column] == null) break;
+				if(!board[row][column].equals(Player)) break;
+					
+					//square is for this player so increment counter
+					totalInRow++;
 			}
 		
 			//check if a winner
@@ -177,12 +185,13 @@ public class MainActivity extends ActionBarActivity {
 	    
 		
 		//check each diagonal (top left to bottom right
+		totalInRow = 0; //reest
 		for(row = 0; row < 3; row++)
 		{
-			totalInRow = 0; //reest
 			//check if this square of the board is for the current player
 			//if not then exit check on this row
-			if(board[row][row] != null &&  !board[row][row].equals(Player)) break;
+			if(board[row][row] == null) break;
+			if(!board[row][row].equals(Player)) break;
 			
 			//square is for this player so increment counter
 			totalInRow++;
@@ -193,22 +202,24 @@ public class MainActivity extends ActionBarActivity {
 		
 		
 		//check each diagonal (bottom left to top right
-		for(row = 2; row >= 0; row--)
+		//check each row
+		row = 2;
+		column = 0;
+		totalInRow = 0; //reest
+		for(int x = 0; x < 3; x++)
 		{
-			totalInRow = 0; //reest
-			//check each row
-			for(column = 0; column < 3; column++)
-			{
-				//check if this square of the board is for the current player
-				//if not then exit check on this row
-				if(board[row][column] != null &&  !board[row][column].equals(Player)) break;
-			}
+			//check if this square of the board is for the current player
+			//if not then exit check on this row
+			if(board[row][column] == null) break;
+			if(!board[row][column].equals(Player)) break;
 			
+			row--;
+			column++;
 			//square is for this player so increment counter
 			totalInRow++;
 		
 			//check if a winner
-			if(totalInRow == 3) return true; 	
+			if(totalInRow == 3) return true;	
 		}
 				
 		return false;
